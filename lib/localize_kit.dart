@@ -19,13 +19,13 @@
 /// dart pub global activate localize_kit
 ///
 /// # Translate to multiple languages
-/// localize -i lib/l10n/app_en.arb -l fr,de,es,hi
+/// localize_kit -i lib/l10n/app_en.arb -l fr,de,es,hi
 ///
 /// # Use custom output directory
-/// localize -i lib/l10n/app_en.arb -l fr,de,es -o translations/
+/// localize_kit -i lib/l10n/app_en.arb -l fr,de,es -o translations/
 ///
 /// # Enable verbose logging
-/// localize -i lib/l10n/app_en.arb -l fr,de,es -v
+/// localize_kit -i lib/l10n/app_en.arb -l fr,de,es -v
 /// ```
 ///
 /// ## Setup

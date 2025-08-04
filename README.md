@@ -55,13 +55,13 @@ GEMINI_API_KEY=your_gemini_api_key_here
 
 ```bash
 # Translate to multiple languages
-dart run localize -i lib/l10n/app_en.arb -l fr,de,es,hi
+dart run localize_kit -i lib/l10n/app_en.arb -l fr,de,es,hi
 
 # Use custom output directory
-dart run localize -i lib/l10n/app_en.arb -l fr,de,es -o translations/
+dart run localize_kit -i lib/l10n/app_en.arb -l fr,de,es -o translations/
 
 # Enable verbose logging
-dart run localize -i lib/l10n/app_en.arb -l fr,de,es -v
+dart run localize_kit -i lib/l10n/app_en.arb -l fr,de,es -v
 ```
 
 ### Command Line Options
@@ -244,7 +244,7 @@ GEMINI_API_KEY=your_gemini_key
 3. **Run translation**:
 
    ```bash
-   dart run localize -i lib/l10n/app_en.arb -l fr,de,es,hi -v
+   dart run localize_kit -i lib/l10n/app_en.arb -l fr,de,es,hi -v
    ```
 
 4. **Review output**:
@@ -295,7 +295,7 @@ GEMINI_API_KEY=your_gemini_key
 Enable verbose logging to see detailed information:
 
 ```bash
-dart run localize -i lib/l10n/app_en.arb -l fr,de,es -v
+dart run localize_kit -i lib/l10n/app_en.arb -l fr,de,es -v
 ```
 
 This will show:
@@ -315,7 +315,7 @@ We welcome contributions! Please feel free to submit issues, feature requests, o
 git clone <repository-url>
 cd localize_kit
 dart pub get
-dart run bin/localize.dart --help
+dart run bin/localize_kit.dart --help
 ```
 
 ## 📄 License
