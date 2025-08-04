@@ -1,7 +1,7 @@
 /// AI Localizer - A powerful command-line tool for localizing Flutter applications
 ///
 /// This package provides AI-powered translation services for Flutter ARB files.
-/// It supports multiple AI models including Gemini 2.0 Flash, GPT-3.5 Turbo, and DeepSeek.
+/// It supports multiple AI models including Gemini 2.0 Flash.
 ///
 /// ## Features
 ///
@@ -19,13 +19,13 @@
 /// dart pub global activate localize_kit
 ///
 /// # Translate to multiple languages
-/// localize_kit -i lib/l10n/app_en.arb -l fr,de,es,hi
+/// localize -i lib/l10n/app_en.arb -l fr,de,es,hi
 ///
 /// # Use custom output directory
-/// localize_kit -i lib/l10n/app_en.arb -l fr,de,es -o translations/
+/// localize -i lib/l10n/app_en.arb -l fr,de,es -o translations/
 ///
 /// # Enable verbose logging
-/// localize_kit -i lib/l10n/app_en.arb -l fr,de,es -v
+/// localize -i lib/l10n/app_en.arb -l fr,de,es -v
 /// ```
 ///
 /// ## Setup
