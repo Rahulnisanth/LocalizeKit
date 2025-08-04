@@ -29,7 +29,7 @@ Map<String, dynamic> identifyKeysToTranslate(
         modifiedValues++;
       }
 
-      bool needsTranslation = !existingTranslations.containsKey(key);
+      final bool needsTranslation = !existingTranslations.containsKey(key);
       final hasMetadataChanges = cleanedSource.containsKey('@$key') &&
           existingTranslations.containsKey('@$key') &&
           !mapEquals(existingTranslations['@$key'], cleanedSource['@$key']);

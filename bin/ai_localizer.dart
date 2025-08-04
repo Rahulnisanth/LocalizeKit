@@ -4,17 +4,28 @@ import 'package:ai_localizer/ai_localizer.dart';
 import 'package:dotenv/dotenv.dart';
 
 Future<void> main(List<String> arguments) async {
-  // Create logger - verbose flag will be updated after parsing arguments
   var logger = const Logger();
 
   printBanner('ARB File Translator', logger);
 
   try {
-    var env = DotEnv(includePlatformEnvironment: true)..load();
+    final env = DotEnv(includePlatformEnvironment: true)..load();
     final apiKey = env['GEMINI_API_KEY'];
 
     if (apiKey == null || apiKey.isEmpty) {
-      logger.error('API Key is not set.');
+      logger.error('❌ GEMINI_API_KEY is not set.');
+      logger.info('');
+      logger.info('📝 To use this tool, you need to set up your API key:');
+      logger.info('');
+      logger.info('1. Create a .env file in your project root');
+      logger.info('2. Add your Gemini API key:');
+      logger.info('   GEMINI_API_KEY=your_api_key_here');
+      logger.info('');
+      logger.info('🔑 Get your API key from: https://aistudio.google.com/app/apikey');
+      logger.info('');
+      logger.info('💡 You can also set the environment variable directly:');
+      logger.info('   export GEMINI_API_KEY=your_api_key_here');
+      logger.info('');
       return;
     }
 
@@ -43,7 +54,7 @@ Future<void> main(List<String> arguments) async {
 
     // Validate input file
     final inputFile = File(inputPath);
-    if (!await inputFile.exists()) {
+    if (!inputFile.existsSync()) {
       logger.error('Input file not found at $inputPath.');
       return;
     }
@@ -71,7 +82,7 @@ Future<void> main(List<String> arguments) async {
 
         // Load existing translations if available
         final existingTranslations = await loadExistingTranslations(outputPath, logger);
-        final isNewFile = !await outputFile.exists();
+        final isNewFile = !outputFile.existsSync();
 
         if (isNewFile) {
           logger.info('Will create a new translation file for $lang: $outputPath');
@@ -90,7 +101,7 @@ Future<void> main(List<String> arguments) async {
           if (removedKeys.isEmpty && removedMetadataKeys.isEmpty && !isNewFile) {
             logger.success('No changes needed for $lang.');
           } else {
-            final updatedContent = JsonEncoder.withIndent('  ').convert(updatedTranslations);
+            final updatedContent = const JsonEncoder.withIndent('  ').convert(updatedTranslations);
             await outputFile.writeAsString(updatedContent);
             logger.success('$lang localization updated at $outputPath (removed ${removedKeys.length + removedMetadataKeys.length} keys).');
           }
@@ -101,7 +112,7 @@ Future<void> main(List<String> arguments) async {
 
         final translatedPartialMap = await batchTranslate(apiKey, keysToTranslate, lang, verbose: logger.verbose);
         final mergedTranslations = {...updatedTranslations, ...translatedPartialMap};
-        final mergedContent = JsonEncoder.withIndent('  ').convert(mergedTranslations);
+        final mergedContent = const JsonEncoder.withIndent('  ').convert(mergedTranslations);
         await outputFile.writeAsString(mergedContent);
 
         final translatedCount = keysToTranslate.entries.where((e) => !e.key.startsWith('@')).length;

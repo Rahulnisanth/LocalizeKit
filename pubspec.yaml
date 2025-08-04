@@ -1,12 +1,14 @@
 name: ai_localizer
-description: A dart package for localizing user-faced strings by LLM models
+description: A powerful command-line tool for localizing Flutter applications using AI-powered translation services. Supports Gemini, GPT, and DeepSeek APIs with smart caching and batch processing.
 version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+# homepage: https://github.com/yourusername/ai_localizer
+# repository: https://github.com/yourusername/ai_localizer
+# issue_tracker: https://github.com/yourusername/ai_localizer/issues
+# documentation: https://github.com/yourusername/ai_localizer#readme
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
 
-# Add regular dependencies here.
 dependencies:
   http: ^1.3.0
   dotenv: ^4.2.0
@@ -16,3 +18,6 @@ dependencies:
 dev_dependencies:
   lints: ^5.0.0
   test: ^1.24.0
+
+executables:
+  ai_localizer: ai_localizer

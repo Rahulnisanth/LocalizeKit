@@ -10,7 +10,7 @@ Future<Map<String, dynamic>> batchTranslate(
   int batchSize = 20,
   bool verbose = false,
 }) async {
-  var logger = const Logger();
+  const logger = Logger();
   // Extract only normal strings for translation (no metadata)
   final normalStrings = <String, String>{};
 
@@ -39,7 +39,7 @@ Future<Map<String, dynamic>> batchTranslate(
         '🔄 Translating batch ${(i ~/ batchSize) + 1} of ${(stringKeys.length / batchSize).ceil()} to $targetLang (${batchKeys.length} strings)');
 
     // Encode just this batch
-    final batchJson = JsonEncoder.withIndent('  ').convert(batchStrings);
+    final batchJson = const JsonEncoder.withIndent('  ').convert(batchStrings);
 
     // Send for translation
     try {
@@ -59,7 +59,7 @@ Future<Map<String, dynamic>> batchTranslate(
 
     // Add a small delay between batches to avoid rate limiting
     if (endIndex < stringKeys.length) {
-      await Future.delayed(Duration(milliseconds: 500));
+      await Future.delayed(const Duration(milliseconds: 500));
     }
   }
 

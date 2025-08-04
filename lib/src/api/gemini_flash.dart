@@ -44,15 +44,15 @@ Future<String> translateWithGemini(String apiKey, String promptHeader, String pr
           if (jsonStart >= 0 && jsonEnd > jsonStart) {
             return translatedText.substring(jsonStart, jsonEnd);
           } else {
-            throw 'Unable to extract JSON from response';
+            throw Exception('Unable to extract JSON from response');
           }
         }
       }
-      throw 'No valid content in API response';
+      throw Exception('No valid content in API response');
     } else {
-      throw 'API Error (${response.statusCode}): ${response.body}';
+      throw Exception('API Error (${response.statusCode}): ${response.body}');
     }
   } catch (e) {
-    throw 'API Error: $e';
+    throw Exception('API Error: $e');
   }
 }

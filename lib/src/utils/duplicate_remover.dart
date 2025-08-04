@@ -9,7 +9,7 @@ Future<Map<String, dynamic>> removeDuplicateAndReplaceCleanJSON({
   required String inputPath,
   bool dryRun = false,
 }) async {
-  var logger = const Logger();
+  const logger = Logger();
 
   logger.info('📂 Reading the input source file...');
   final rawContent = await inputFile.readAsString();
@@ -30,7 +30,7 @@ Future<Map<String, dynamic>> removeDuplicateAndReplaceCleanJSON({
 
   logger.info('🔍 Checking for duplicates in source file...');
 
-  for (var entry in jsonContent.entries) {
+  for (final entry in jsonContent.entries) {
     final key = entry.key;
     final value = entry.value;
 
@@ -75,7 +75,7 @@ Future<Map<String, dynamic>> removeDuplicateAndReplaceCleanJSON({
 
   // Write cleaned file if not dry run
   if (removedDuplicates.isNotEmpty && !dryRun) {
-    final cleanedJsonString = JsonEncoder.withIndent('  ').convert(cleaned);
+    final cleanedJsonString = const JsonEncoder.withIndent('  ').convert(cleaned);
 
     // Overwrite input file
     await inputFile.writeAsString(cleanedJsonString);

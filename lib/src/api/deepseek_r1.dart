@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:ai_localizer/src/core/constants.dart';
 import 'package:http/http.dart' as http;
 
@@ -13,11 +12,11 @@ Future<String> translateWithDeepSeek(String apiKey, String arbContent, String la
     Uri.parse(DEEPSEEK_BASE_URL),
     headers: {'Authorization': 'Bearer $apiKey', 'Content-Type': 'application/json'},
     body: jsonEncode({
-      "model": "deepseek-chat",
-      "messages": [
-        {"role": "user", "content": prompt},
+      'model': 'deepseek-chat',
+      'messages': [
+        {'role': 'user', 'content': prompt},
       ],
-      "stream": false,
+      'stream': false,
     }),
   );
 

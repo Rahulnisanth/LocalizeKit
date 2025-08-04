@@ -12,11 +12,11 @@ Future<String> translateWithGPT(String apiKey, String arbContent, String langCod
     Uri.parse(OPENAI_BASE_URL),
     headers: {'Authorization': 'Bearer $apiKey', 'Content-Type': 'application/json'},
     body: jsonEncode({
-      "model": "gpt-3.5-turbo",
-      "messages": [
-        {"role": "user", "content": prompt},
+      'model': 'gpt-3.5-turbo',
+      'messages': [
+        {'role': 'user', 'content': prompt},
       ],
-      "temperature": 0.3,
+      'temperature': 0.3,
     }),
   );
 

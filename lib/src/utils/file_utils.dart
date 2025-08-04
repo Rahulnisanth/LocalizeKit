@@ -12,7 +12,7 @@ Future<String> determineOutputPath(String inputPath, String lang, String? output
 
     // Ensure output directory exists
     final directory = Directory(outputDir);
-    if (!await directory.exists()) {
+    if (!directory.existsSync()) {
       await directory.create(recursive: true);
     }
   } else {
@@ -32,7 +32,7 @@ Future<String> determineOutputPath(String inputPath, String lang, String? output
 Future<Map<String, dynamic>> loadExistingTranslations(String filePath, Logger logger) async {
   final file = File(filePath);
   Map<String, dynamic> translations = {};
-  bool fileExists = await file.exists();
+  final bool fileExists = file.existsSync();
 
   if (fileExists) {
     try {

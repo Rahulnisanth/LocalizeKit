@@ -1,10 +1,9 @@
-// Add these utility functions
 import 'dart:convert';
 import 'dart:io';
 import 'package:ai_localizer/src/core/logger.dart';
 import 'package:path/path.dart' as path;
 
-var logger = const Logger();
+const logger = Logger();
 
 // Function to update the cache with non-metadata entries
 Future<void> updateCache(String sourcePath, Map<String, dynamic> sourceData) async {
@@ -12,7 +11,7 @@ Future<void> updateCache(String sourcePath, Map<String, dynamic> sourceData) asy
   final cacheDir = Directory(path.dirname(cacheFilePath));
 
   // Create cache directory if it doesn't exist
-  if (!await cacheDir.exists()) {
+  if (!cacheDir.existsSync()) {
     await cacheDir.create(recursive: true);
   }
 
@@ -26,7 +25,7 @@ Future<void> updateCache(String sourcePath, Map<String, dynamic> sourceData) asy
 
   // Write cache file with only the key-value pairs (no metadata)
   final cacheFile = File(cacheFilePath);
-  final cacheContent = JsonEncoder.withIndent('  ').convert(nonMetadataEntries);
+  final cacheContent = const JsonEncoder.withIndent('  ').convert(nonMetadataEntries);
   await cacheFile.writeAsString(cacheContent);
 }
 
@@ -35,7 +34,7 @@ Future<Map<String, dynamic>?> readCache(String sourcePath) async {
   final cacheFilePath = _getCacheFilePath(sourcePath);
   final cacheFile = File(cacheFilePath);
 
-  if (await cacheFile.exists()) {
+  if (cacheFile.existsSync()) {
     try {
       final content = await cacheFile.readAsString();
       return jsonDecode(content) as Map<String, dynamic>;
