@@ -32,9 +32,8 @@ Future<String> determineOutputPath(String inputPath, String lang, String? output
 Future<Map<String, dynamic>> loadExistingTranslations(String filePath, Logger logger) async {
   final file = File(filePath);
   Map<String, dynamic> translations = {};
-  final bool fileExists = file.existsSync();
 
-  if (fileExists) {
+  if (file.existsSync()) {
     try {
       final content = await file.readAsString();
       translations = jsonDecode(content);
