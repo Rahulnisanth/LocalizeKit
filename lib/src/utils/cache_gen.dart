@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
-import 'package:ai_localizer/src/core/logger.dart';
+import 'package:localize_kit/src/core/logger.dart';
 import 'package:path/path.dart' as path;
 
 const logger = Logger();

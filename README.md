@@ -1,6 +1,6 @@
-# AI Localizer
+# LocalizeKit
 
-**AI Localizer** is a powerful command-line tool that automates the localization of Flutter applications using AI-powered translation services. It processes ARB (Application Resource Bundle) files and generates accurate translations while preserving metadata, placeholders, and formatting.
+**LocalizeKit** is a powerful command-line tool that automates the localization of Flutter applications using AI-powered translation services. It processes ARB (Application Resource Bundle) files and generates accurate translations while preserving metadata, placeholders, and formatting.
 
 ## 🚀 Features
 
@@ -23,14 +23,14 @@
 ### Global Installation
 
 ```bash
-dart pub global activate ai_localizer
+dart pub global activate localize_kit
 ```
 
 ### Local Installation
 
 ```bash
 git clone <repository-url>
-cd ai_localizer
+cd localize_kit
 dart pub get
 ```
 
@@ -43,19 +43,11 @@ Create a `.env` file in your project root and add your API key:
 ```env
 # For Gemini 2.0 Flash (default)
 GEMINI_API_KEY=your_gemini_api_key_here
-
-# For OpenAI GPT-3.5 Turbo
-OPENAI_API_KEY=your_openai_api_key_here
-
-# For DeepSeek
-DEEPSEEK_API_KEY=your_deepseek_api_key_here
 ```
 
 ### Get Your API Keys
 
 - **Gemini**: Visit [Google AI Studio](https://aistudio.google.com/app/apikey)
-- **OpenAI**: Visit [OpenAI Platform](https://platform.openai.com/api-keys)
-- **DeepSeek**: Visit [DeepSeek Platform](https://platform.deepseek.com/)
 
 ## 🛠️ Usage
 
@@ -63,13 +55,13 @@ DEEPSEEK_API_KEY=your_deepseek_api_key_here
 
 ```bash
 # Translate to multiple languages
-dart run ai_localizer -i lib/l10n/app_en.arb -l fr,de,es,hi
+dart run localize -i lib/l10n/app_en.arb -l fr,de,es,hi
 
 # Use custom output directory
-dart run ai_localizer -i lib/l10n/app_en.arb -l fr,de,es -o translations/
+dart run localize -i lib/l10n/app_en.arb -l fr,de,es -o translations/
 
 # Enable verbose logging
-dart run ai_localizer -i lib/l10n/app_en.arb -l fr,de,es -v
+dart run localize -i lib/l10n/app_en.arb -l fr,de,es -v
 ```
 
 ### Command Line Options
@@ -232,12 +224,6 @@ Switch between different AI services by updating your `.env` file:
 ```env
 # Use Gemini (default)
 GEMINI_API_KEY=your_gemini_key
-
-# Or use OpenAI
-OPENAI_API_KEY=your_openai_key
-
-# Or use DeepSeek
-DEEPSEEK_API_KEY=your_deepseek_key
 ```
 
 ## 📊 Example Workflow
@@ -258,7 +244,7 @@ DEEPSEEK_API_KEY=your_deepseek_key
 3. **Run translation**:
 
    ```bash
-   dart run ai_localizer -i lib/l10n/app_en.arb -l fr,de,es,hi -v
+   dart run localize -i lib/l10n/app_en.arb -l fr,de,es,hi -v
    ```
 
 4. **Review output**:
@@ -309,7 +295,7 @@ DEEPSEEK_API_KEY=your_deepseek_key
 Enable verbose logging to see detailed information:
 
 ```bash
-dart run ai_localizer -i lib/l10n/app_en.arb -l fr,de,es -v
+dart run localize -i lib/l10n/app_en.arb -l fr,de,es -v
 ```
 
 This will show:
@@ -327,9 +313,9 @@ We welcome contributions! Please feel free to submit issues, feature requests, o
 
 ```bash
 git clone <repository-url>
-cd ai_localizer
+cd localize_kit
 dart pub get
-dart run bin/ai_localizer.dart --help
+dart run bin/localize.dart --help
 ```
 
 ## 📄 License

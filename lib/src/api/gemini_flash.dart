@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:ai_localizer/src/core/constants.dart';
+import 'package:localize_kit/src/core/constants.dart';
 
 // Function to call Gemini 2.0 Flash API for translation
 /// Translates the given ARB content to the specified language using Gemini 2.0 Flash's.

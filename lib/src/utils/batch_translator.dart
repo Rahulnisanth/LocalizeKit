@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'dart:math';
-import 'package:ai_localizer/ai_localizer.dart';
+import 'package:localize_kit/localize_kit.dart';
 
 // Batch translation function to handle large sets of strings
 Future<Map<String, dynamic>> batchTranslate(

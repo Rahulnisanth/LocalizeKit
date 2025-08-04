@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
-import 'package:ai_localizer/ai_localizer.dart';
+import 'package:localize_kit/localize_kit.dart';
 import 'package:dotenv/dotenv.dart';
 
 Future<void> main(List<String> arguments) async {

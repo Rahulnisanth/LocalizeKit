@@ -1,10 +1,10 @@
-name: ai_localizer
-description: A powerful command-line tool for localizing Flutter applications using AI-powered translation services. Supports Gemini, GPT, and DeepSeek APIs with smart caching and batch processing.
+name: localize_kit
+description: A powerful command-line tool for localizing Flutter applications using AI-powered translation services. Supports Gemini 2.0 Flash API with smart caching and batch processing.
 version: 1.0.0
-# homepage: https://github.com/yourusername/ai_localizer
-# repository: https://github.com/yourusername/ai_localizer
-# issue_tracker: https://github.com/yourusername/ai_localizer/issues
-# documentation: https://github.com/yourusername/ai_localizer#readme
+# homepage: https://github.com/yourusername/localize_kit
+# repository: https://github.com/yourusername/localize_kit
+# issue_tracker: https://github.com/yourusername/localize_kit/issues
+# documentation: https://github.com/yourusername/localize_kit#readme
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -20,4 +20,4 @@ dev_dependencies:
   test: ^1.24.0
 
 executables:
-  ai_localizer: ai_localizer
+  localize_kit: localize_kit

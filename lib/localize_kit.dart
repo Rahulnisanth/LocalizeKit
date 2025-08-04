@@ -16,16 +16,16 @@
 ///
 /// ```bash
 /// # Install globally
-/// dart pub global activate ai_localizer
+/// dart pub global activate localize_kit
 ///
 /// # Translate to multiple languages
-/// ai_localizer -i lib/l10n/app_en.arb -l fr,de,es,hi
+/// localize_kit -i lib/l10n/app_en.arb -l fr,de,es,hi
 ///
 /// # Use custom output directory
-/// ai_localizer -i lib/l10n/app_en.arb -l fr,de,es -o translations/
+/// localize_kit -i lib/l10n/app_en.arb -l fr,de,es -o translations/
 ///
 /// # Enable verbose logging
-/// ai_localizer -i lib/l10n/app_en.arb -l fr,de,es -v
+/// localize_kit -i lib/l10n/app_en.arb -l fr,de,es -v
 /// ```
 ///
 /// ## Setup
@@ -41,7 +41,6 @@
 library;
 
 export 'src/api/gemini_flash.dart';
-export 'src/api/gpt_turbo.dart';
 export 'src/core/constants.dart';
 export 'src/utils/batch_translator.dart';
 export 'src/utils/duplicate_remover.dart';

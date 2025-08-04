@@ -1,4 +1,4 @@
-import 'package:ai_localizer/ai_localizer.dart';
+import 'package:localize_kit/localize_kit.dart';
 
 // Function to identify keys that need translation
 Map<String, dynamic> identifyKeysToTranslate(

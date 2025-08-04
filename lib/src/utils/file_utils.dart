@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
-import 'package:ai_localizer/ai_localizer.dart';
+import 'package:localize_kit/localize_kit.dart';
 import 'package:path/path.dart' as path;
 
 // Function to remove duplicate keys and replace cleaned JSON

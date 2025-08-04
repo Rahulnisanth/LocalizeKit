@@ -2,7 +2,7 @@
 
 ## 1.0.0
 
-- Initial release of AI Localizer
+- Initial release of Localize Kit
 - Support for Gemini 2.0 Flash API
 - Support for GPT-3.5 Turbo API
 - Support for DeepSeek API

@@ -1,7 +1,3 @@
-const OPENAI_BASE_URL = 'https://api.openai.com/v1/chat/completions';
-
-const DEEPSEEK_BASE_URL = 'https://api.deepseek.com/chat/completions';
-
 const GEMINI_BASE_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
 
 const PROMPT_HEADER =

@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'dart:convert' show json, JsonEncoder;
-import 'package:ai_localizer/src/core/logger.dart';
+import 'package:localize_kit/src/core/logger.dart';
 
 /// Cleans a JSON file by removing duplicate keys with same values
 /// and throwing error if a duplicate key has different value.

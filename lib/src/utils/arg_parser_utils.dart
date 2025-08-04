@@ -1,4 +1,4 @@
-import 'package:ai_localizer/ai_localizer.dart';
+import 'package:localize_kit/localize_kit.dart';
 import 'package:args/args.dart';
 
 ArgParser createCommandLineParser() {
