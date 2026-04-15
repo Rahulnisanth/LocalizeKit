@@ -27,6 +27,7 @@ analyzer:
     todo: ignore
     # Ignore constant identifier names for generated files
     constant_identifier_names: ignore
+    avoid_print: ignore
 
 linter:
   rules:

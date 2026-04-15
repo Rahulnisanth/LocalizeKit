@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_print
-
 import 'package:localize_kit/localize_kit.dart';
 import 'package:args/args.dart';
 

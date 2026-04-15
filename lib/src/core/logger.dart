@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_print
-
 /// Simple logger with support for different log levels and colored output
 class Logger {
   final bool verbose;
