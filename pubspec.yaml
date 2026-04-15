@@ -1,5 +1,5 @@
 name: localize_kit
-description: A powerful command-line tool for localizing Flutter applications using AI-powered translation services. Supports Gemini 2.0 Flash API with smart caching and batch processing.
+description: A powerful command-line tool for localizing Flutter applications using AI-powered translation services. Supports Gemini 2.5 Flash API with smart caching and batch processing.
 version: 1.0.0
 # homepage: https://github.com/yourusername/localize_kit
 # repository: https://github.com/yourusername/localize_kit

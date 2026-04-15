@@ -1,4 +1,4 @@
-const GEMINI_BASE_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
+const GEMINI_BASE_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent';
 
 const PROMPT_HEADER =
     'You are a professional translator specializing in mobile app localization. Translate the following JSON ARB file strings from English to the following language(s):';

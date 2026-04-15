@@ -1,7 +1,7 @@
 /// AI Localizer - A powerful command-line tool for localizing Flutter applications
 ///
 /// This package provides AI-powered translation services for Flutter ARB files.
-/// It supports multiple AI models including Gemini 2.0 Flash.
+/// It supports multiple AI models including Gemini 2.5 Flash.
 ///
 /// ## Features
 ///

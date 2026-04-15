@@ -4,7 +4,7 @@
 
 ## 🚀 Features
 
-- **AI-Powered Translation**: Supports multiple AI models including Gemini 2.0 Flash, GPT-3.5 Turbo, and DeepSeek
+- **AI-Powered Translation**: Supports multiple AI models including Gemini 2.5 Flash, GPT-3.5 Turbo, and DeepSeek
 - **Batch Processing**: Efficiently translates multiple strings in batches to optimize API usage
 - **Smart Caching**: Tracks changes and only translates new or modified strings
 - **Metadata Preservation**: Maintains ARB metadata and placeholders (`{count}`, `{name}`, etc.)
@@ -41,7 +41,7 @@ dart pub get
 Create a `.env` file in your project root and add your API key:
 
 ```env
-# For Gemini 2.0 Flash (default)
+# For Gemini 2.5 Flash (default)
 GEMINI_API_KEY=your_gemini_api_key_here
 ```
 
