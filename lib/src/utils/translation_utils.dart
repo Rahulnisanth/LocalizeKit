@@ -13,6 +13,7 @@ Map<String, dynamic> identifyKeysToTranslate(
   int modifiedMetadata = 0;
   int unchangedKeys = 0;
 
+  // Add new commit
   cleanedSource.forEach((key, value) {
     if (key.startsWith('@')) return;
 
