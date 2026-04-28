@@ -13,7 +13,6 @@ Future<Map<String, dynamic>> batchTranslate(
   const logger = Logger();
   // Extract only normal strings for translation (no metadata)
   final normalStrings = <String, String>{};
-
   stringsToTranslate.forEach((key, value) {
     if (!key.startsWith('@') && value is String) {
       normalStrings[key] = value;
