@@ -1,6 +1,7 @@
 import 'package:localize_kit/localize_kit.dart';
 import 'package:args/args.dart';
 
+// Function to create the command-line argument parser
 ArgParser createCommandLineParser() {
   return ArgParser()
     ..addOption('input', abbr: 'i', help: 'Path to input .arb file (English source)')
