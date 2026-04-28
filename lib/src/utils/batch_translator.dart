@@ -19,7 +19,7 @@ Future<Map<String, dynamic>> batchTranslate(
     }
   });
 
-  // Get string keys in a list for batching
+  // Get string keys in a list for batching...
   final stringKeys = normalStrings.keys.toList();
   final resultMap = <String, dynamic>{};
 
