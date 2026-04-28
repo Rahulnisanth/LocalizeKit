@@ -4,8 +4,6 @@
 
 - Initial release of Localize Kit
 - Support for Gemini 2.5 Flash API
-- Support for GPT-3.5 Turbo API
-- Support for DeepSeek API
 - Smart caching system for incremental translations
 - Batch processing for efficient API usage
 - Metadata preservation in ARB files
