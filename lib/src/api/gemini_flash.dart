@@ -3,8 +3,7 @@ import 'package:http/http.dart' as http;
 import 'package:localize_kit/src/core/constants.dart';
 
 // Function to call Gemini 2.5 Flash API for translation
-/// Translates the given ARB content to the specified language using Gemini 2.5 Flash's.
-/// Returns the translated content as a JSON string.
+/// Translates the given ARB content to the specified language
 Future<String> translateWithGemini(String apiKey, String promptHeader, String promptBody, String jsonContent, String targetLang) async {
   final uri = Uri.parse('$GEMINI_BASE_URL?key=$apiKey');
 
